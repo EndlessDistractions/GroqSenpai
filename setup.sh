@@ -28,4 +28,11 @@ if [ -f "requirements.txt" ]; then
   pip install -r requirements.txt
 fi
 
+if [-f "database.json"]; then
+  echo "Database file already exists."
+else
+  echo "Creating database.json file..."
+  echo "{}" > database.json
+fi
+
 echo "Setup complete!"
